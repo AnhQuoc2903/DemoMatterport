@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/css/library/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/png" href="./src/access/img/logoNTN.png">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <title>NHÀ THIẾU NHI THÀNH PHỐ HỒ CHÍ MINH - KHÔNG GIAN BÁC HỒ VỚI THIẾU NHI</title>
+</head>
+
+<body>
+  <header>
+    <div id="header">
+      <div class="container-header">
+        <a class="navbar-brand logo-web nav-item" href="#" id="logo" data-room="room0">
+          <img src="./src/access/img/Nhom logo 3.png" alt="">
+        </a>
+        <div class="header-main">
+          <h1>NHÀ THIẾU NHI THÀNH PHỐ HỒ CHÍ MINH </h1>
+          <div class="header-menu-wrapper">
+
+            <div class="header-toggle" id="headerToggle">
+              <i class="fa-solid fa-table-cells"></i>
+            </div>
+
+            <div class="header-actions" id="headerActions">
+
+              <button id="btn-delay-1" class="btn-play-youtube" onclick="showYoutubePopup()">
+                <i class="fa-solid fa-play"></i>
+                Xem khuôn viên 360 độ
+              </button>
+
+              <div class="header-mute">
+
+                <div class="sound-toggle">
+
+                  <div class="sound-icon">
+                    <i class="fa-solid fa-volume-high"></i>
+                  </div>
+
+                  <span class="sound-text">
+                    Âm thanh
+                  </span>
+
+                </div>
+
+              </div>
+
+              <div class="header-about">
+                <p>LỜI GIỚI THIỆU</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+
+
+
+    <div id="youtube-popup" class="youtube-popup">
+      <div class="youtube-popup-content">
+        <span class="popup-close" onclick="closeYoutubePopup()">&times;</span>
+        <iframe width="853" height="480" src="https://www.youtube.com/embed/YD5VmVhLhjI"
+          title="Nhà Thiếu Nhi TP.HCM - Khuôn viên 360 độ" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+
+
+    <div class="audio-popup" id="audioPopup">
+      <div class="audio-popup-overlay"></div>
+      <div class="audio-popup-container">
+        <div class="audio-popup-card">
+          <div class="audio-popup-icon">
+            <i class="fa-solid fa-headphones-simple"></i>
+          </div>
+          <h2 class="audio-popup-title">Bật âm thanh?</h2>
+          <p class="audio-popup-desc">Trải nghiệm sống động hơn với âm thanh nền</p>
+          <div class="audio-popup-buttons">
+            <button class="audio-btn audio-btn-no" id="btnAudioNo">
+              <i class="fa-solid fa-volume-xmark"></i>
+              <span>Không</span>
+            </button>
+            <button class="audio-btn audio-btn-yes" id="btnAudioYes">
+              <i class="fa-solid fa-volume-high"></i>
+              <span>Có</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about-us">
+      <div class="about-us-overlay"></div>
+
+      <div class="about-us_main">
+        <button class="buttonClose">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="contentPopup">
+          <h2 class="group">
+            LỜI GIỚI THIỆU
+          </h2>
+
+          <div class="about-content">
+            <p>
+              Không gian Bác Hồ với Thiếu nhi là nơi lưu giữ những hình ảnh,
+              tư liệu và câu chuyện ý nghĩa về Chủ tịch Hồ Chí Minh đối với
+              thế hệ thiếu nhi Việt Nam.
+            </p>
+
+            <p>
+              Không gian được xây dựng nhằm giáo dục truyền thống yêu nước,
+              lòng tự hào dân tộc và giúp các em thiếu nhi học tập,
+              làm theo 5 điều Bác Hồ dạy.
+            </p>
+
+            <p>
+              Đây cũng là điểm tham quan, học tập và trải nghiệm dành cho
+              các em đội viên, thiếu nhi và phụ huynh khi đến với
+              Nhà Thiếu nhi Thành phố Hồ Chí Minh.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="room">
+      <div class="roombox">
+        <div class="room-item show room0" id="room0">
+          <iframe width="853" height="480" src="https://mpembed.com/show/?m=LpJw8G855Tn&mpu=826"
+            allow="xr-spatial-tracking"></iframe>
+        </div>
+        <div class="room-item room1" id="room1">
+          <iframe width="853" height="480"></iframe>
+        </div>
+        <div class="room-item room2" id="room2">
+          <iframe width="853" height="480"></iframe>
+        </div>
+        <div class="room-item room3" id="room3">
+          <iframe width="853" height="480"></iframe>
+        </div>
+        <div class="room-item room4" id="room4">
+          <iframe width="853" height="480"></iframe>
+        </div>
+        <div class="room-item room5" id="room5">
+          <iframe width="853" height="480"></iframe>
+        </div>
+        <div class="room-item room6" id="room6">
+          <iframe width="853" height="480"></iframe>
+        </div>
+        <div class="room-item room7" id="room7">
+          <iframe width="853" height="480"></iframe>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="popup" class="">
+      <div class="popupmain">
+        <button class="buttonClose">x</button>
+        <div class="contentPopup">
+          <div class="containerModule">
+            <canvas class="moduleThumb"></canvas>
+          </div>
+          <div class="content-popup-bottom">
+            <p class="module3dLoad-title">Giới thiệu về bác Hồ</p>
+            <div class="descContentPopup">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+
+    <footer>
+      <div id="menuFooter">
+        <div class="footer-about">
+
+        </div>
+        <ul class="menu-Main">
+          <li id="roomid0" class="menu-item nav-item active" data-room="room0" ">
+          <audio id="audio0" src="./src/access/audio/listmusic_2.mp3"></audio>
+            <a class="nav-link translation" title="Tượng Bác Hồ với thiếu nhi" data-translate-vi="Phòng 1"
+              data-translate-en="Room 1"></a>
+            <div class="name-room">
+              <p>TƯỢNG ĐÀI BÁC HỒ VỚI THIẾU NHI</p>
+            </div>
+          </li>
+
+          <li class="menu-item nav-item" data-room="room1" ">
+          <audio id="audio1" src="./src/access/audio/tiepbuocchaanh.mp3"></audio>
+            <a class="nav-link translation" title="Chủ đề 1" data-translate-vi="Phòng 1" data-translate-en="Room 1"></a>
+            <div class="name-room">
+              <p>TUỔI NHỎ HÀO HÙNG GIAI ĐOẠN (1941 – 1975)</p>
+            </div>
+          </li>
+
+          <li class="menu-item nav-item" data-room="room2" ">
+          <audio id="audio2" src="./src/access/audio/tiepbuocchaanh.mp3"></audio>
+            <a class="nav-link translation" title="Chủ đề 2" data-translate-vi="Phòng 2" data-translate-en="Room 2"></a>
+            <div class="name-room">
+              <p>PHÒNG KẾT NẠP ĐỘI VIÊN</p>
+            </div>
+          </li>
+
+          <li class="menu-item nav-item" data-room="room4" ">
+          <audio id="audio3" src="./src/access/audio/tronnienkinhyeu.mp3"></audio>
+            <a class="nav-link translation" title="Chủ đề 3" data-translate-vi="Phòng 4" data-translate-en="Room 4"></a>
+            <div class="name-room">
+              <p>KHÔNG GIAN THÂN THẾ VÀ SỰ NGHIỆP CÁCH MẠNG CỦA CHỦ TỊCH HỒ CHÍ MINH</p>
+            </div>
+          </li>
+
+          <li class="menu-item nav-item" data-room="room3" ">
+          <audio id="audio4" src="./src/access/audio/thieunhilamtheoloibac.mp3"></audio>
+            <a class="nav-link translation" title="Không gian thân thế và sự nghiệp cách mạng của Chủ tịch Hồ Chí Minh"
+              data-translate-vi="Phòng 3" data-translate-en="Room 3"></a>
+            <div class="name-room">
+              <p>KHÔNG GIAN BÁC HỒ VỚI THIẾU NHI</p>
+            </div>
+          </li>
+
+          <li class="menu-item nav-item" data-room="room5" ">
+          <audio id="audio5" src="./src/access/audio/thieunhilamtheoloibac.mp3"></audio>
+            <a class="nav-link translation" title="Không gian Thiếu nhi làm theo 05 điều Bác Hồ dạy"
+              data-translate-vi="Phòng 5" data-translate-en="Room 5"></a>
+            <div class="name-room">
+              <p>KHÔNG GIAN THIẾU NHI LÀM THEO 05 ĐIỀU BÁC HỒ DẠY</p>
+            </div>
+          </li>
+
+          <li class="menu-item nav-item" data-room="room6" ">
+          <audio id="audio6" src="./src/access/audio/thieunhilamtheoloibac.mp3"></audio>
+            <a class="nav-link translation" title="Không gian triển lãm theo đề" data-translate-vi="Phòng 6"
+              data-translate-en="Room 6"></a>
+            <div class="name-room">
+              <p>KHÔNG GIAN TRIỂN LÃM THEO CHUYÊN ĐỀ</p>
+            </div>
+          </li>
+
+          <li class="menu-item nav-item" data-room="room7" ">
+          <audio id="audio7" src="./src/access/audio/tronnienkinhyeu.mp3"></audio>
+            <a class="nav-link translation" title="Không gian thờ Bác Hồ" data-translate-vi="Phòng 7"
+              data-translate-en="Room 7"></a>
+            <div class="name-room">
+              <p>PHÒNG THỜ CHỦ TỊCH HỒ CHÍ MINH</p>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </footer>
+    <script src="./src/js/scripts.js"></script>
+    <script type="module" src="./data.js"></script>
+    <script type="module" src="./src/js/main.js"></script>
+    <script type="module" src="./src/js/Menu.js"></script>
+
+</body>
+
+</html>
