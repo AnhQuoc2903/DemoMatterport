@@ -1,5 +1,5 @@
 import { $$, $ } from "./index.js";
-import { dataJson, videoSrcs, srcVoidMC } from "../../data.js";
+import { videoSrcs, srcVoidMC } from "../../data.js";
 export default class MenuHandler {
   constructor(element) {
     this.element = element;

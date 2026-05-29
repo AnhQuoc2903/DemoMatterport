@@ -42,6 +42,18 @@ function stopAudio() {
   }
 }
 
+function pauseAudio() {
+  if (currentAudio) {
+    currentAudio.pause();
+  }
+}
+
+function resumeAudio() {
+  if (currentAudio) {
+    currentAudio.play().catch(() => {});
+  }
+}
+
 function goBackToFirstRoom(event) {
   event.stopPropagation();
   const firstRoom = document.getElementById("roomid0");
@@ -56,7 +68,9 @@ function goBackToFirstRoom(event) {
 
 function showYoutubePopup() {
   const popup = document.getElementById("youtube-popup");
-  popup.style.display = "block";
+  popup.style.display = "flex";
+
+  pauseAudio();
 
   document.querySelectorAll("video").forEach((video) => {
     video.pause();
@@ -75,14 +89,18 @@ function showYoutubePopup() {
 
 function closeYoutubePopup() {
   const popup = document.getElementById("youtube-popup");
-  popup.style.display = "none";
 
   const iframe = popup.querySelector("iframe");
+
   if (iframe) {
     const src = iframe.src;
     iframe.src = "";
     iframe.src = src;
   }
+
+  popup.style.display = "none";
+
+  resumeAudio();
 }
 
 window.addEventListener("DOMContentLoaded", () => {
